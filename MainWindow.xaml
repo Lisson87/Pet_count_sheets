@@ -1,0 +1,32 @@
+﻿<Window x:Class="Pet_count_sheets.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pet_count_sheets"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="LV" ItemsSource="{Binding}"/>
+
+        <TextBox x:Name="txtPlotter" Grid.Row="1" IsReadOnly="True" >Информация по метражу рулона для плоттера</TextBox>
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Click="Button_Click">добавить</Button>
+            <Button Grid.Column="1" Click="Button_Click_1">Очистить</Button>
+        </Grid>
+        
+    </Grid>
+</Window>
