@@ -5,8 +5,9 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <FileVersion>1.1</FileVersion>
+    <FileVersion>2.0</FileVersion>
     <ApplicationIcon>!Draw\program.ico</ApplicationIcon>
+    <AssemblyVersion>1.0.0.10</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
