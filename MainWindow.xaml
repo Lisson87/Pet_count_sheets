@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pet_count_sheets"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Расчет количества бумаги и стоимости печати" Height="450" Width="650">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <ListView x:Name="LV" ItemsSource="{Binding}"/>
@@ -22,10 +23,20 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Click="Button_Click">добавить</Button>
-            <Button Grid.Column="1" Click="Button_Click_1">Очистить</Button>
+            <Button Grid.Column="0" Click="btn_AddFile">добавить</Button>
+            <Button Grid.Column="1" Click="btn_Clear">Очистить</Button>
+        </Grid>
+
+        <Grid Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar x:Name="Progress_value" Minimum="0" Maximum="100" Height="25" Value="0"/>
+            <TextBlock x:Name="Progress_file_name" Grid.Column="3" Text="Статус" VerticalAlignment="Center"/>
+
         </Grid>
         
     </Grid>
